@@ -21,7 +21,13 @@ h1 {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--border-radius);
   cursor: pointer;
+  text-align: center;
   text-transform: uppercase;
-  width: 275px;
-  margin: 20px auto;
+  width: 330px;
+  margin: 20px auto 10px;
+  user-select: none;
+}
+
+h1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
