@@ -34,3 +34,9 @@ h1 {
 h1:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Bookmarks */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
