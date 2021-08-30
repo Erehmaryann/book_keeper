@@ -1,5 +1,6 @@
 :root {
   --primary-color: #6e18f0;
+  --border-radius: 5px;
 }
 
 * {
