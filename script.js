@@ -24,6 +24,10 @@ const storeBookmark = (e) => {
   e.preventDefault();
   const nameValue = websiteNameEl.value;
   let urlValue = websiteUrlEl.value;
+  //adding http/https to url value
+  if (!urlValue.includes("https://") && !urlValue.includes("http://")) {
+    urlValue = `https://${urlValue}`;
+  }
   console.log(nameValue, urlValue);
 };
 
