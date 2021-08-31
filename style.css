@@ -64,3 +64,8 @@ a:link,
 a:visited {
   color: #fff;
 }
+
+a:hover,
+a:active {
+  text-decoration: underline;
+}
