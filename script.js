@@ -19,6 +19,9 @@ const closeModal = () => {
   modal.classList.remove("show-modal");
 };
 
+// Validate Form
+const validate = (nameValue, urlValue) => {};
+
 // Handle data from form
 const storeBookmark = (e) => {
   e.preventDefault();
