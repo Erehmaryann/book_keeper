@@ -146,6 +146,10 @@ a:active {
   padding: 15px;
 }
 
+h3 {
+  margin: 0;
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 768px) {
   .container {
