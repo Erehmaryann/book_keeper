@@ -185,6 +185,10 @@ button {
   margin-top: 10px;
 }
 
+button:hover {
+  filter: brightness(110%);
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 768px) {
   .container {
