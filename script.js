@@ -20,7 +20,12 @@ const closeModal = () => {
 };
 
 // Handle data from form
-const storeBookmark = (e) => {};
+const storeBookmark = (e) => {
+  e.preventDefault();
+  const nameValue = websiteNameEl.value;
+  let urlValue = websiteUrlEl.value;
+  console.log(nameValue, urlValue);
+};
 
 // Modal show event listener
 modalShow.addEventListener("click", showModal);
