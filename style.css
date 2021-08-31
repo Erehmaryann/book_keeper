@@ -155,6 +155,11 @@ h3 {
   background: whitesmoke;
 }
 
+/* Form */
+.form-group {
+  height: 55px;
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 768px) {
   .container {
