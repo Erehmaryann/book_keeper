@@ -24,4 +24,6 @@ modalShow.addEventListener("click", showModal);
 // Modal close event listener
 modalClose.addEventListener("click", closeModal);
 // Close Modal when you click outside the box
-window.addEventListener("click", (e) => {});
+window.addEventListener("click", (e) => {
+  e.target === modal ? modal.classList.remove("show-modal") : false;
+});
