@@ -69,3 +69,10 @@ a:hover,
 a:active {
   text-decoration: underline;
 }
+
+.name img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: sub;
+}
