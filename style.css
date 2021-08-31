@@ -168,6 +168,12 @@ h3 {
   display: block;
   outline: none;
 }
+
+.form-label {
+  color: var(--primary-color);
+  display: block;
+}
+
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 768px) {
   .container {
