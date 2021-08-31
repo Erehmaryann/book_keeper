@@ -14,9 +14,14 @@ const showModal = () => {
   websiteNameEl.focus();
 };
 
+// Close the modal
+const closeModal = () => {
+  modal.classList.remove("show-modal");
+};
+
 // Modal show event listener
 modalShow.addEventListener("click", showModal);
 // Modal close event listener
-modalClose.addEventListener("click", () => {
-  modal.classList.remove("show-modal");
-});
+modalClose.addEventListener("click", closeModal);
+// Close Modal when you click outside the box
+window.addEventListener("click", (e) => {});
