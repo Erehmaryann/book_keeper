@@ -19,6 +19,9 @@ const closeModal = () => {
   modal.classList.remove("show-modal");
 };
 
+// Handle data from form
+const storeBookmark = (e) => {};
+
 // Modal show event listener
 modalShow.addEventListener("click", showModal);
 // Modal close event listener
