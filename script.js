@@ -27,3 +27,6 @@ modalClose.addEventListener("click", closeModal);
 window.addEventListener("click", (e) => {
   e.target === modal ? modal.classList.remove("show-modal") : false;
 });
+
+//Submit Event Listener
+bookmarkForm.addEventListener("submit", storeBookmark);
