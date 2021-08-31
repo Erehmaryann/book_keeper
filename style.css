@@ -75,6 +75,12 @@ a:active {
   cursor: pointer;
   z-index: 2;
 }
+
+.name {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
 .name img {
   height: 20px;
   width: 20px;
