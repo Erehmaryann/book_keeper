@@ -56,6 +56,7 @@ const storeBookmark = (e) => {
     url: urlValue,
   };
   bookmarks.push(bookmark);
+  localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   bookmarkForm.reset();
   websiteNameEl.focus();
 };
