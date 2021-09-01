@@ -20,7 +20,17 @@ const closeModal = () => {
 };
 
 // Validate Form
-const validate = (nameValue, urlValue) => {};
+const validate = (nameValue, urlValue) => {
+  const exp =
+    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
+  const regex = new RegExp(exp);
+  if (urlValue.match(regex)) {
+    alert("match");
+  }
+  if (!urlValue.match(regex)) {
+    alert("please provide a valid web address");
+  }
+};
 
 // Handle data from form
 const storeBookmark = (e) => {
