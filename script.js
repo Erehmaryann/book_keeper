@@ -58,6 +58,7 @@ const fetchBookmarks = () => {
     ];
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }
+  buildBookmarks();
 };
 
 // Handle data from form
