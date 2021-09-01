@@ -48,6 +48,8 @@ const buildBookmarks = () => {
     const { name, url } = bookmark;
     // Item
     const item = document.createElement("div");
+    item.classList.add("item");
+    //
   });
 };
 
