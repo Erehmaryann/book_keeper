@@ -55,6 +55,9 @@ const storeBookmark = (e) => {
     name: nameValue,
     url: urlValue,
   };
+  bookmarks.push(bookmark);
+  bookmarkForm.reset();
+  websiteNameEl.focus();
 };
 
 // Modal show event listener
