@@ -57,6 +57,8 @@ const buildBookmarks = () => {
     // Favicon / Link Container
     const linkInfo = document.createElement("div");
     linkInfo.classList.add("name");
+    //Favicon
+    const favicon = document.createElement("img");
   });
 };
 
