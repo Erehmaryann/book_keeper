@@ -61,7 +61,7 @@ const buildBookmarks = () => {
     const favicon = document.createElement("img");
     favicon.setAttribute(
       "src",
-      `https//s2.googleusercontent.com/s2/favicons?domain=${url}`
+      `https://s2.googleusercontent.com/s2/favicons?domain=${url}`
     );
     favicon.setAttribute("alt", "Favicon");
     // Link
