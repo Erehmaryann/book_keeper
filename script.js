@@ -42,6 +42,10 @@ const validate = (nameValue, urlValue) => {
 // Fetch Bookmarks from local storage
 const fetchBookmarks = () => {
   // Get bookmarks from localStorage if available
+  const getBookmarks = localStorage.getItem("bookmarks");
+  if (getBookmarks) {
+    bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+  }
 };
 
 // Handle data from form
