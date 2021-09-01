@@ -53,6 +53,7 @@ const buildBookmarks = () => {
     const closeIcon = document.createElement("i");
     closeIcon.classList.add("fas", "fa-times");
     closeIcon.setAttribute("title", "Delete Bookmark");
+    closeIcon.setAttribute("onclick", `deleteBookmark('${url}')`);
   });
 };
 
