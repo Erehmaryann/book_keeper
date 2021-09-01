@@ -68,6 +68,7 @@ const buildBookmarks = () => {
     const link = document.createElement("a");
     link.setAttribute("href", `${url}`);
     link.setAttribute("target", "_blank");
+    link.textContent = name;
   });
 };
 
@@ -83,8 +84,8 @@ const fetchBookmarks = () => {
     // Create bookmarks array in localStorage
     bookmarks = [
       {
-        name: "food",
-        url: "https://food.com",
+        name: "Google",
+        url: "https://google.com",
       },
     ];
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
