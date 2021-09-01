@@ -40,6 +40,12 @@ const validate = (nameValue, urlValue) => {
   return true;
 };
 
+// Build Bookmarks UI
+const buildBookmarks = () => {
+  // Build items
+  bookmarks.forEach((bookmark) => {});
+};
+
 // Fetch Bookmarks from local storage
 const fetchBookmarks = () => {
   // Get bookmarks from localStorage if available
