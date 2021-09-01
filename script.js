@@ -56,6 +56,7 @@ const buildBookmarks = () => {
     closeIcon.setAttribute("onclick", `deleteBookmark('${url}')`);
     // Favicon / Link Container
     const linkInfo = document.createElement("div");
+    linkInfo.classList.add("name");
   });
 };
 
