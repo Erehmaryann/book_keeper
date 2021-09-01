@@ -72,6 +72,7 @@ const buildBookmarks = () => {
     // Append to bookmarks container
     linkInfo.append(favicon, link);
     item.append(closeIcon, linkInfo);
+    bookmarkContainer.appendChild(item);
   });
 };
 
