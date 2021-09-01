@@ -39,6 +39,11 @@ const validate = (nameValue, urlValue) => {
   return true;
 };
 
+// Fetch Bookmarks from local storage
+const fetchBookmarks = () => {
+  // Get bookmarks from localStorage if available
+};
+
 // Handle data from form
 const storeBookmark = (e) => {
   e.preventDefault();
