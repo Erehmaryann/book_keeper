@@ -8,6 +8,9 @@ const websiteNameEl = document.querySelector("#websiteName");
 const websiteUrlEl = document.querySelector("#websiteUrl");
 const bookmarkContainer = document.querySelector("#bookmarkContainer");
 
+//Bookmark array
+let bookmarks = [];
+
 // Show the modal, Focus on the website name input field
 const showModal = () => {
   modal.classList.add("show-modal");
@@ -48,6 +51,10 @@ const storeBookmark = (e) => {
   if (!validate(nameValue, urlValue)) {
     return false;
   }
+  const bookmark = {
+    name: nameValue,
+    url: urlValue,
+  };
 };
 
 // Modal show event listener
