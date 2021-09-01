@@ -29,6 +29,7 @@ const validate = (nameValue, urlValue) => {
   }
   if (!urlValue.match(regex)) {
     alert("please provide a valid web address");
+    return false;
   }
 };
 
@@ -42,6 +43,7 @@ const storeBookmark = (e) => {
     urlValue = `https://${urlValue}`;
   }
   console.log(nameValue, urlValue);
+  validate(nameValue, urlValue);
 };
 
 // Modal show event listener
