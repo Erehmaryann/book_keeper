@@ -67,6 +67,7 @@ const buildBookmarks = () => {
     // Link
     const link = document.createElement("a");
     link.setAttribute("href", `${url}`);
+    link.setAttribute("target", "_blank");
   });
 };
 
