@@ -40,13 +40,14 @@ const validate = (nameValue, urlValue) => {
   return true;
 };
 
-// Build Bookmarks UI
+// Populating Bookmarks DOM
 const buildBookmarks = () => {
   // Build items
   bookmarks.forEach((bookmark) => {
     // Destructuring the name and url for each obj
     const { name, url } = bookmark;
-    console.log(name, url);
+    // Item
+    const item = document.createElement("div");
   });
 };
 
