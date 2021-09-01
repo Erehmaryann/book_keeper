@@ -45,6 +45,14 @@ const fetchBookmarks = () => {
   const getBookmarks = localStorage.getItem("bookmarks");
   if (getBookmarks) {
     bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+  } else {
+    // Create bookmarks array in localStorage
+    bookmarks = [
+      {
+        name: "food",
+        url: "https://jacinto.design",
+      },
+    ];
   }
 };
 
