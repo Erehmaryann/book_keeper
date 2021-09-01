@@ -44,7 +44,7 @@ const validate = (nameValue, urlValue) => {
 const buildBookmarks = () => {
   // Build items
   bookmarks.forEach((bookmark) => {
-    // Destructuring the name and url for each obj
+    // Destructuring the name and url of each obj
     const { name, url } = bookmark;
     // Item
     const item = document.createElement("div");
@@ -66,6 +66,7 @@ const buildBookmarks = () => {
     favicon.setAttribute("alt", "Favicon");
     // Link
     const link = document.createElement("a");
+    link.setAttribute("href", `${url}`);
   });
 };
 
