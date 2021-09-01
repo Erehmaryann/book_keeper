@@ -64,6 +64,8 @@ const buildBookmarks = () => {
       `https//s2.googleusercontent.com/s2/favicons?domain=${url}`
     );
     favicon.setAttribute("alt", "Favicon");
+    // Link
+    const link = document.createElement("a");
   });
 };
 
