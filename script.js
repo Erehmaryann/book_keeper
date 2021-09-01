@@ -40,23 +40,10 @@ const validate = (nameValue, urlValue) => {
   return true;
 };
 
-// Delete Bookmark
-const deleteBookmark = (url) => {
-  // Loop through bookmarks
-  bookmarks.forEach((bookmark, index) => {
-    // Check if the url is the same
-    if (bookmark.url === url) {
-      // Remove from array
-      bookmarks.splice(index, 1);
-    }
-    //Update bookmarks array in localStorage, re-populate the DOM
-    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
-    fetchBookmarks();
-  });
-};
-
 // Populating Bookmarks DOM
 const buildBookmarks = () => {
+  // Clear bookmarks container
+  bookmarkContainer.textContent = "";
   // Build items
   bookmarks.forEach((bookmark) => {
     // Destructuring the name and url of each obj
@@ -110,6 +97,21 @@ const fetchBookmarks = () => {
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }
   buildBookmarks();
+};
+
+// Delete Bookmark
+const deleteBookmark = (url) => {
+  // Loop through bookmarks array
+  bookmarks.forEach((bookmark, index) => {
+    // Check if the url is the same
+    if (bookmark.url === url) {
+      // Remove from array
+      bookmarks.splice(index, 1);
+    }
+    //Update bookmarks array in localStorage, re-populate the DOM
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    fetchBookmarks();
+  });
 };
 
 // Handle data from form
