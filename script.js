@@ -40,6 +40,21 @@ const validate = (nameValue, urlValue) => {
   return true;
 };
 
+// Delete Bookmark
+const deleteBookmark = (url) => {
+  // Loop through bookmarks
+  bookmarks.forEach((bookmark, index) => {
+    // Check if the url is the same
+    if (bookmark.url === url) {
+      // Remove from array
+      bookmarks.splice(index, 1);
+    }
+    //Update bookmarks array in localStorage, re-populate the DOM
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    fetchBookmarks();
+  });
+};
+
 // Populating Bookmarks DOM
 const buildBookmarks = () => {
   // Build items
@@ -121,6 +136,7 @@ const storeBookmark = (e) => {
   fetchBookmarks();
   bookmarkForm.reset();
   websiteNameEl.focus();
+  closeModal();
 };
 
 // Modal show event listener
