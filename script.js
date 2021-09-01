@@ -43,7 +43,11 @@ const validate = (nameValue, urlValue) => {
 // Build Bookmarks UI
 const buildBookmarks = () => {
   // Build items
-  bookmarks.forEach((bookmark) => {});
+  bookmarks.forEach((bookmark) => {
+    // Destructuring the name and url for each obj
+    const { name, url } = bookmark;
+    console.log(name, url);
+  });
 };
 
 // Fetch Bookmarks from local storage
@@ -59,7 +63,7 @@ const fetchBookmarks = () => {
     bookmarks = [
       {
         name: "food",
-        url: "https://jacinto.design",
+        url: "https://food.com",
       },
     ];
     localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
