@@ -24,6 +24,7 @@ const closeModal = () => {
 
 // Validate Form
 const validate = (nameValue, urlValue) => {
+  // Check for space in the url(checking the url pattern)
   const exp =
     /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
   const regex = new RegExp(exp);
@@ -45,7 +46,9 @@ const fetchBookmarks = () => {
   const getBookmarks = localStorage.getItem("bookmarks");
   if (getBookmarks) {
     bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
-  } else {
+  }
+  // On the user first visit to the website
+  else {
     // Create bookmarks array in localStorage
     bookmarks = [
       {
@@ -53,6 +56,7 @@ const fetchBookmarks = () => {
         url: "https://jacinto.design",
       },
     ];
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
   }
 };
 
@@ -65,15 +69,19 @@ const storeBookmark = (e) => {
   if (!urlValue.includes("https://") && !urlValue.includes("http://")) {
     urlValue = `https://${urlValue}`;
   }
+  //Calling the form validation func
   if (!validate(nameValue, urlValue)) {
     return false;
   }
+  // Bookmark obj
   const bookmark = {
     name: nameValue,
     url: urlValue,
   };
   bookmarks.push(bookmark);
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+  //set the bookmark array when updating through form
+  fetchBookmarks();
   bookmarkForm.reset();
   websiteNameEl.focus();
 };
@@ -89,3 +97,6 @@ window.addEventListener("click", (e) => {
 
 //Submit Event Listener
 bookmarkForm.addEventListener("submit", storeBookmark);
+
+// On load
+fetchBookmarks();
