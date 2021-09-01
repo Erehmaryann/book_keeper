@@ -49,7 +49,8 @@ const buildBookmarks = () => {
     // Item
     const item = document.createElement("div");
     item.classList.add("item");
-    //
+    //Close Icon
+    const closeIcon = document.createElement("i");
   });
 };
 
