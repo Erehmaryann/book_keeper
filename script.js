@@ -59,6 +59,10 @@ const buildBookmarks = () => {
     linkInfo.classList.add("name");
     //Favicon
     const favicon = document.createElement("img");
+    favicon.setAttribute(
+      "src",
+      `https//s2.googleusercontent.com/s2/favicons?domain=${url}`
+    );
   });
 };
 
