@@ -51,6 +51,7 @@ const buildBookmarks = () => {
     item.classList.add("item");
     //Close Icon
     const closeIcon = document.createElement("i");
+    closeIcon.classList.add("fas", "fa-times");
   });
 };
 
