@@ -28,13 +28,12 @@ const validate = (nameValue, urlValue) => {
     alert("Please submit values for both fields.");
     return false;
   }
-  if (urlValue.match(regex)) {
-    alert("match");
-  }
   if (!urlValue.match(regex)) {
     alert("please provide a valid web address.");
     return false;
   }
+  // Valid
+  return true;
 };
 
 // Handle data from form
@@ -46,8 +45,9 @@ const storeBookmark = (e) => {
   if (!urlValue.includes("https://") && !urlValue.includes("http://")) {
     urlValue = `https://${urlValue}`;
   }
-  console.log(nameValue, urlValue);
-  validate(nameValue, urlValue);
+  if (!validate(nameValue, urlValue)) {
+    return false;
+  }
 };
 
 // Modal show event listener
